@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhfe562cw8ykx"]
+
+[ext_resource type="Script" path="res://scripts/components/cards/gamecard/comp_gamecard_appearance.gd" id="1_bo4w5"]
+
+[node name="CompGameCardAppearance" type="Node"]
+script = ExtResource("1_bo4w5")

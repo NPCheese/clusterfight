@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://6hj57fhwmre4"]
+
+[ext_resource type="Script" path="res://scripts/components/cards/gamecard/comp_gamecard_touch.gd" id="1_80v2x"]
+
+[node name="CompTouch" type="Node"]
+script = ExtResource("1_80v2x")

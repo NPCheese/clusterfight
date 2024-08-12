@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnooxu4tstfgy"]
+
+[ext_resource type="Script" path="res://scripts/components/cards/gamecard/comp_gamecard_scale.gd" id="1_sbldi"]
+
+[node name="CompScale" type="Node"]
+script = ExtResource("1_sbldi")
