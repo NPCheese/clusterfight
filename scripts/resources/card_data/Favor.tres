@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=4 format=3 uid="uid://ci5l4tlj41eti"]
+
+[ext_resource type="Texture2D" uid="uid://bklbr10y41r8p" path="res://gfx/cards/artwork/favor_1.png" id="1_kix24"]
+[ext_resource type="Script" path="res://scripts/resources/card_data.gd" id="1_uvoio"]
+[ext_resource type="Texture2D" uid="uid://bx51ft24ayfbp" path="res://gfx/cards/title/favor.png" id="3_gnlpb"]
+
+[resource]
+script = ExtResource("1_uvoio")
+cardName = "Favor"
+shortDescription = "Pick a player to give you a card of their choosing"
+rating = 1
+cardClass = 0
+artworkVariants = Array[Texture2D]([ExtResource("1_kix24")])
+titleLogo = ExtResource("3_gnlpb")
+highlightColor = 6
+countPerPlayers = Array[int]([3, 3, 3, 4, 5, 5, 6])
+flags = Array[int]([7, 9, 10, 12, 14, 23])

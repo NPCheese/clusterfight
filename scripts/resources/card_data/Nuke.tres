@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=4 format=3 uid="uid://bivyhihnliunv"]
+
+[ext_resource type="Texture2D" uid="uid://djxx0bl6vdngm" path="res://gfx/cards/artwork/nuke_1.png" id="1_c51xi"]
+[ext_resource type="Script" path="res://scripts/resources/card_data.gd" id="1_ufdgi"]
+[ext_resource type="Texture2D" uid="uid://dqowl4wy65nt2" path="res://gfx/cards/title/nuke.png" id="3_015mo"]
+
+[resource]
+script = ExtResource("1_ufdgi")
+cardName = "Nuke"
+shortDescription = "When drawn face down, place it back in the deck face up. When drawn face up, you explode."
+rating = 3
+cardClass = 3
+artworkVariants = Array[Texture2D]([ExtResource("1_c51xi")])
+titleLogo = ExtResource("3_015mo")
+highlightColor = 0
+countPerPlayers = Array[int]([0, 0, 0, 1, 2, 2, 3])
+flags = Array[int]([])

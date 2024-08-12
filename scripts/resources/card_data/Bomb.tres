@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=8 format=3 uid="uid://bv20kmff8gtcw"]
+
+[ext_resource type="Texture2D" uid="uid://rlh82s84d8rc" path="res://gfx/cards/artwork/bomb_1.png" id="1_6mjsf"]
+[ext_resource type="Script" path="res://scripts/resources/card_data.gd" id="1_8fen4"]
+[ext_resource type="Texture2D" uid="uid://clmchxku8jqek" path="res://gfx/cards/artwork/bomb_2.png" id="2_ug1vj"]
+[ext_resource type="Texture2D" uid="uid://cbxqydmprf8xi" path="res://gfx/cards/artwork/bomb_3.png" id="3_73uvl"]
+[ext_resource type="Texture2D" uid="uid://bra6iuynprlpj" path="res://gfx/cards/artwork/bomb_4.png" id="4_occva"]
+[ext_resource type="Texture2D" uid="uid://dn2so0ryqnb7u" path="res://gfx/cards/artwork/bomb_5.png" id="5_aefro"]
+[ext_resource type="Texture2D" uid="uid://c20jjnpgtggir" path="res://gfx/cards/title/bomb.png" id="7_ps2pe"]
+
+[resource]
+script = ExtResource("1_8fen4")
+cardName = "Bomb"
+shortDescription = "Defuse this immediately"
+rating = 3
+cardClass = 3
+artworkVariants = Array[Texture2D]([ExtResource("1_6mjsf"), ExtResource("2_ug1vj"), ExtResource("3_73uvl"), ExtResource("4_occva"), ExtResource("5_aefro")])
+titleLogo = ExtResource("7_ps2pe")
+highlightColor = 0
+countPerPlayers = Array[int]([5, 6, 7, 8, 9, 10, 11])
+flags = Array[int]([])

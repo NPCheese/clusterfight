@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://d0xlqw1nd8q6"]
+
+[ext_resource type="Script" path="res://scripts/resources/card_data.gd" id="1_amndu"]
+[ext_resource type="Texture2D" uid="uid://bdlxkoayuqu11" path="res://gfx/cards/artwork/copypaste_1.png" id="1_igh1x"]
+[ext_resource type="Texture2D" uid="uid://4scyrypotpnm" path="res://gfx/cards/artwork/copypaste_2.png" id="2_t3pry"]
+[ext_resource type="Texture2D" uid="uid://bogn0xcfcvden" path="res://gfx/cards/title/copypaste.png" id="4_lrr8g"]
+
+[resource]
+script = ExtResource("1_amndu")
+cardName = "Copy Paste"
+shortDescription = "Copies the ability of the card underneath."
+rating = 3
+cardClass = 0
+artworkVariants = Array[Texture2D]([ExtResource("1_igh1x"), ExtResource("2_t3pry")])
+titleLogo = ExtResource("4_lrr8g")
+highlightColor = 8
+countPerPlayers = Array[int]([0, 2, 2, 3, 4, 4, 4])
+flags = Array[int]([21])

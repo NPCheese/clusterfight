@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=11 format=3 uid="uid://wwamgqdbqywa"]
+
+[ext_resource type="Script" path="res://scripts/resources/card_data.gd" id="1_f2c6h"]
+[ext_resource type="Texture2D" uid="uid://csa6ly1yqoknf" path="res://gfx/cards/artwork/defuse_1.png" id="1_ogy3p"]
+[ext_resource type="Texture2D" uid="uid://cwupj3vdpx6ob" path="res://gfx/cards/artwork/defuse_2.png" id="2_axuga"]
+[ext_resource type="Texture2D" uid="uid://cxldoo6bkpkdo" path="res://gfx/cards/artwork/defuse_3.png" id="3_tqy1v"]
+[ext_resource type="Texture2D" uid="uid://dbc3iw4joq1el" path="res://gfx/cards/artwork/defuse_4.png" id="4_8gau2"]
+[ext_resource type="Texture2D" uid="uid://ha8shaov2flu" path="res://gfx/cards/artwork/defuse_5.png" id="5_rhhpx"]
+[ext_resource type="Texture2D" uid="uid://b3s45hpxdx3el" path="res://gfx/cards/artwork/defuse_6.png" id="6_8q846"]
+[ext_resource type="Texture2D" uid="uid://cne6ir03ehg4d" path="res://gfx/cards/artwork/defuse_7.png" id="7_hgmra"]
+[ext_resource type="Texture2D" uid="uid://dyqdgvhkde1go" path="res://gfx/cards/artwork/defuse_8.png" id="8_idj67"]
+[ext_resource type="Texture2D" uid="uid://dxq4lwryk4482" path="res://gfx/cards/title/defuse.png" id="10_5152j"]
+
+[resource]
+script = ExtResource("1_f2c6h")
+cardName = "Defuse"
+shortDescription = "Used for defusing bombs."
+rating = 3
+cardClass = 3
+artworkVariants = Array[Texture2D]([ExtResource("1_ogy3p"), ExtResource("2_axuga"), ExtResource("3_tqy1v"), ExtResource("4_8gau2"), ExtResource("5_rhhpx"), ExtResource("6_8q846"), ExtResource("7_hgmra"), ExtResource("8_idj67")])
+titleLogo = ExtResource("10_5152j")
+highlightColor = 9
+countPerPlayers = Array[int]([1, 2, 2, 2, 2, 2, 2])
+flags = Array[int]([])
