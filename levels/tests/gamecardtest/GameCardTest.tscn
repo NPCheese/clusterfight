@@ -1,0 +1,93 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddhslqajk46jg"]
+
+[ext_resource type="Script" path="res://levels/tests/gamecardtest/gamecardtest.gd" id="1_bfu8u"]
+[ext_resource type="PackedScene" uid="uid://c1fw1ajr8qmu4" path="res://prefabs/cards/gamecard/GameCard.tscn" id="2_macpe"]
+[ext_resource type="PackedScene" uid="uid://cqj0g8fqr8f8" path="res://prefabs/cards/handcard/HandCard.tscn" id="3_7gcso"]
+
+[sub_resource type="Environment" id="Environment_mncin"]
+background_mode = 3
+glow_enabled = true
+
+[node name="GameCardTest" type="Node2D"]
+script = ExtResource("1_bfu8u")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mncin")
+
+[node name="GameCard" parent="." instance=ExtResource("2_macpe")]
+position = Vector2(624, 285)
+
+[node name="HandCard" parent="." instance=ExtResource("3_7gcso")]
+position = Vector2(759, 283)
+
+[node name="RandomCardData" type="Button" parent="."]
+offset_left = 46.0
+offset_top = 452.0
+offset_right = 214.0
+offset_bottom = 483.0
+text = "randomize card data"
+
+[node name="GlowUp" type="Button" parent="."]
+offset_left = 301.0
+offset_top = 452.0
+offset_right = 373.0
+offset_bottom = 483.0
+text = "Glow up"
+
+[node name="GlowDown" type="Button" parent="."]
+offset_left = 292.0
+offset_top = 502.0
+offset_right = 387.0
+offset_bottom = 533.0
+text = "Glow down"
+
+[node name="Flip" type="Button" parent="."]
+offset_left = 473.0
+offset_top = 446.0
+offset_right = 568.0
+offset_bottom = 477.0
+text = "Flip"
+
+[node name="ScaleUp" type="Button" parent="."]
+offset_left = 648.0
+offset_top = 446.0
+offset_right = 743.0
+offset_bottom = 477.0
+text = "Scale up"
+
+[node name="ScaleDown" type="Button" parent="."]
+offset_left = 648.0
+offset_top = 491.0
+offset_right = 743.0
+offset_bottom = 522.0
+text = "Scale down
+"
+
+[node name="Tilt" type="Button" parent="."]
+offset_left = 836.0
+offset_top = 446.0
+offset_right = 931.0
+offset_bottom = 477.0
+text = "Tilt"
+
+[node name="Move" type="Button" parent="."]
+offset_left = 836.0
+offset_top = 491.0
+offset_right = 931.0
+offset_bottom = 522.0
+text = "Move"
+
+[node name="Touch" type="Button" parent="."]
+offset_left = 836.0
+offset_top = 545.0
+offset_right = 931.0
+offset_bottom = 599.0
+text = "Touch
+(tilt+move)"
+
+[node name="ResetTouch" type="Button" parent="."]
+offset_left = 836.0
+offset_top = 615.0
+offset_right = 931.0
+offset_bottom = 669.0
+text = "Reset"

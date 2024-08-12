@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://djp64vyjblo86"]
+
+[ext_resource type="Script" path="res://levels/tests/piletest/pile_test.gd" id="1_c4i6e"]
+[ext_resource type="PackedScene" uid="uid://dxgo5oulpotvg" path="res://prefabs/piles/Pile.tscn" id="1_ph1v2"]
+[ext_resource type="PackedScene" uid="uid://c1fw1ajr8qmu4" path="res://prefabs/cards/gamecard/GameCard.tscn" id="3_exayi"]
+
+[node name="PileTest" type="Node2D"]
+script = ExtResource("1_c4i6e")
+
+[node name="Pile" parent="." instance=ExtResource("1_ph1v2")]
+position = Vector2(484, 341)
+touching_force = 5.0
+face_down = false
+
+[node name="GameCard" parent="." instance=ExtResource("3_exayi")]
+position = Vector2(931, 491)
+
+[node name="CreateRandomCard" type="Button" parent="."]
+offset_left = 708.0
+offset_top = 315.0
+offset_right = 869.0
+offset_bottom = 368.0
+text = "create random card"
+
+[node name="CreateFromThisCard" type="Button" parent="."]
+offset_left = 668.0
+offset_top = 468.0
+offset_right = 854.0
+offset_bottom = 521.0
+text = "Create from This card ->"
+
+[node name="RemoveCardAt" type="Button" parent="."]
+offset_left = 668.0
+offset_top = 627.0
+offset_right = 862.0
+offset_bottom = 680.0
+text = "Remove card at index:"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 299.0
+offset_top = 45.0
+offset_right = 932.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 901.0
+offset_top = 634.0
+offset_right = 968.062
+offset_bottom = 665.0
+text = "-1"
+
+[node name="Populate" type="Button" parent="."]
+offset_left = 842.0
+offset_top = 220.0
+offset_right = 997.0
+offset_bottom = 274.0
+text = "Populate with
+random card datas"
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+offset_left = 1035.0
+offset_top = 231.0
+offset_right = 1102.06
+offset_bottom = 262.0
+text = "100"
