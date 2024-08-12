@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://d56umukb7i2q"]
+
+[ext_resource type="Script" path="res://prefabs/drawzone/draw_zone.gd" id="1_opgw3"]
+[ext_resource type="PackedScene" uid="uid://bsfjujkxshhn8" path="res://scripts/components/drawzone/CompDrawZoneSplitPile.tscn" id="2_agwot"]
+[ext_resource type="PackedScene" uid="uid://dxgo5oulpotvg" path="res://prefabs/piles/Pile.tscn" id="2_ipi1k"]
+[ext_resource type="PackedScene" uid="uid://tjucpx84kjyw" path="res://prefabs/drawzone/DrawZoneButton.tscn" id="3_ha7is"]
+
+[node name="DrawZone" type="Node2D"]
+script = ExtResource("1_opgw3")
+
+[node name="CompSplitPile" parent="." instance=ExtResource("2_agwot")]
+
+[node name="PilesGroup" type="CanvasGroup" parent="."]
+
+[node name="BottomPile" parent="PilesGroup" instance=ExtResource("2_ipi1k")]
+touching_force = 4.0
+
+[node name="BottomButton" parent="PilesGroup/BottomPile" instance=ExtResource("3_ha7is")]
+
+[node name="TopPile" parent="PilesGroup" instance=ExtResource("2_ipi1k")]
+touching_force = 4.0
+
+[node name="TopButton" parent="PilesGroup/TopPile" instance=ExtResource("3_ha7is")]

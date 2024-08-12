@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8n6e2wfhfrtt"]
+
+[ext_resource type="Script" path="res://prefabs/cards/cardbody/cardparts/card_parts.gd" id="1_6stf4"]
+[ext_resource type="Texture2D" uid="uid://c4e315htvf78b" path="res://gfx/cards/generic/card_glow.png" id="1_nbxpn"]
+[ext_resource type="Texture2D" uid="uid://cixbrndx0wy6u" path="res://gfx/cards/generic/card_border.png" id="2_2xbwh"]
+[ext_resource type="Texture2D" uid="uid://dt2xv6tjhghpv" path="res://gfx/cards/generic/card_back.png" id="3_1qh18"]
+[ext_resource type="Script" path="res://prefabs/cards/cardbody/cardparts/glow.gd" id="3_uwyag"]
+
+[node name="CardParts" type="Node2D"]
+script = ExtResource("1_6stf4")
+
+[node name="Glow" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(2, 2, 2, 1)
+texture = ExtResource("1_nbxpn")
+script = ExtResource("3_uwyag")
+
+[node name="Border" type="Sprite2D" parent="."]
+texture = ExtResource("2_2xbwh")
+
+[node name="Artwork" type="Sprite2D" parent="."]
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(0, -230)
+
+[node name="CardBack" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_1qh18")

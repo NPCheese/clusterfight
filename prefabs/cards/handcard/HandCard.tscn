@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqj0g8fqr8f8"]
+
+[ext_resource type="PackedScene" uid="uid://c1fw1ajr8qmu4" path="res://prefabs/cards/gamecard/GameCard.tscn" id="1_hruff"]
+[ext_resource type="Script" path="res://prefabs/cards/handcard/hand_card.gd" id="2_3uxw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ouybx"]
+size = Vector2(100, 122)
+
+[node name="HandCard" instance=ExtResource("1_hruff")]
+script = ExtResource("2_3uxw7")
+
+[node name="PickupArea" type="Area2D" parent="." index="5"]
+collision_mask = 2
+monitorable = false
+
+[node name="PickupCollisionShape" type="CollisionShape2D" parent="PickupArea" index="0"]
+shape = SubResource("RectangleShape2D_ouybx")

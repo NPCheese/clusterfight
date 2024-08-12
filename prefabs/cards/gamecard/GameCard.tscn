@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1fw1ajr8qmu4"]
+
+[ext_resource type="Script" path="res://prefabs/cards/gamecard/game_card.gd" id="1_dx78x"]
+[ext_resource type="PackedScene" uid="uid://bhfe562cw8ykx" path="res://scripts/components/cards/gamecard/CompGameCardAppearance.tscn" id="2_un3mb"]
+[ext_resource type="PackedScene" uid="uid://b41dv8wuxavgw" path="res://prefabs/cards/cardbody/CardBody.tscn" id="3_syrm7"]
+[ext_resource type="PackedScene" uid="uid://b8k4d3eldcg5s" path="res://scripts/components/cards/gamecard/CompGameCardGlow.tscn" id="3_uu8dr"]
+[ext_resource type="PackedScene" uid="uid://c5ja8hlvlho1v" path="res://scripts/components/cards/gamecard/CompGameCardFlip.tscn" id="4_ax3h2"]
+[ext_resource type="PackedScene" uid="uid://bnooxu4tstfgy" path="res://scripts/components/cards/gamecard/CompGameCardScale.tscn" id="5_psnji"]
+[ext_resource type="PackedScene" uid="uid://6hj57fhwmre4" path="res://scripts/components/cards/gamecard/CompGameCardTouch.tscn" id="6_xfxj3"]
+
+[node name="GameCard" type="Node2D"]
+script = ExtResource("1_dx78x")
+
+[node name="CompAppearance" parent="." instance=ExtResource("2_un3mb")]
+
+[node name="CompGlow" parent="." instance=ExtResource("3_uu8dr")]
+
+[node name="CompFlip" parent="." instance=ExtResource("4_ax3h2")]
+
+[node name="CompScale" parent="." instance=ExtResource("5_psnji")]
+
+[node name="CompTouch" parent="." instance=ExtResource("6_xfxj3")]
+
+[node name="TouchHelper" type="Marker2D" parent="."]
+unique_name_in_owner = true
+
+[node name="ScaleHelper" type="Marker2D" parent="TouchHelper"]
+unique_name_in_owner = true
+
+[node name="FlipHelper" type="Marker2D" parent="TouchHelper/ScaleHelper"]
+unique_name_in_owner = true
+
+[node name="CardBody" parent="TouchHelper/ScaleHelper/FlipHelper" instance=ExtResource("3_syrm7")]
+unique_name_in_owner = true

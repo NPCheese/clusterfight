@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxgo5oulpotvg"]
+
+[ext_resource type="Script" path="res://prefabs/piles/pile.gd" id="1_ub60g"]
+[ext_resource type="PackedScene" uid="uid://jg7hq5rlul7l" path="res://scripts/components/piles/CompPileCreateCard.tscn" id="2_73fl2"]
+[ext_resource type="PackedScene" uid="uid://hacsojvjeie" path="res://scripts/components/piles/CompPileRegisterCard.tscn" id="3_74ra1"]
+[ext_resource type="PackedScene" uid="uid://cfavirjdhpdwm" path="res://scripts/components/piles/CompPilePopulate.tscn" id="3_00801"]
+
+[node name="Pile" type="Node2D"]
+script = ExtResource("1_ub60g")
+
+[node name="CompCreateCard" parent="." instance=ExtResource("2_73fl2")]
+
+[node name="CompPopulate" parent="." instance=ExtResource("3_00801")]
+
+[node name="CompRegisterCard" parent="." instance=ExtResource("3_74ra1")]
+
+[node name="CardsContainer" type="Node2D" parent="."]

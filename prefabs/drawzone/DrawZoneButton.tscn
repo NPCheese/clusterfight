@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://tjucpx84kjyw"]
+
+[ext_resource type="Script" path="res://prefabs/drawzone/draw_zone_button.gd" id="1_7o4xk"]
+
+[node name="DrawZoneButton" type="Button"]
+offset_left = -59.0
+offset_top = -71.0
+offset_right = 59.0
+offset_bottom = 71.0
+focus_mode = 0
+mouse_force_pass_scroll_events = false
+flat = true
+script = ExtResource("1_7o4xk")

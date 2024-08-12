@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b41dv8wuxavgw"]
+
+[ext_resource type="Script" path="res://prefabs/cards/cardbody/card_body.gd" id="1_pobbi"]
+[ext_resource type="PackedScene" uid="uid://b8n6e2wfhfrtt" path="res://prefabs/cards/cardbody/cardparts/CardParts.tscn" id="2_gq08i"]
+
+[node name="CardBody" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_pobbi")
+
+[node name="CardParts" parent="." instance=ExtResource("2_gq08i")]
