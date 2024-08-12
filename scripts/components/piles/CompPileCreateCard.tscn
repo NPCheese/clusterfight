@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jg7hq5rlul7l"]
+
+[ext_resource type="Script" path="res://scripts/components/piles/comp_pile_createcard.gd" id="1_jhxdg"]
+
+[node name="CompCreateCard" type="Node"]
+script = ExtResource("1_jhxdg")

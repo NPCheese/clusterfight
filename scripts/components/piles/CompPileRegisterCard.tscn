@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://hacsojvjeie"]
+
+[ext_resource type="Script" path="res://scripts/components/piles/comp_pile_registercard.gd" id="1_avblj"]
+
+[node name="CompRegisterCard" type="Node"]
+script = ExtResource("1_avblj")
