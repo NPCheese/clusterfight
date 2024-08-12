@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsfjujkxshhn8"]
+
+[ext_resource type="Script" path="res://scripts/components/drawzone/comp_drawzone_splitpile.gd" id="1_kgqak"]
+
+[node name="CompSplitPile" type="Node"]
+script = ExtResource("1_kgqak")
