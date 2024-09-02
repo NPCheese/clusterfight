@@ -19,28 +19,28 @@ var custom_glow_color: Color = Color.BLACK
 @onready var game_card: GameCard = $".."
 
 func _process(delta):
+	var card_glow :CardPartGlow = game_card.card_body.card_parts.glow
+	
 	if glowing:
 		_alpha_factor = clamp(_alpha_factor + (delta * FADEIN_SPEED), 0.0, 1.0)
 	else:
 		_alpha_factor = clamp(_alpha_factor - (delta * FADEOUT_SPEED), 0.0, 1.0)
+		card_glow.modulate.a = _alpha_factor
 		if _alpha_factor == 0.0:
 			return
 	
-	if _glow_direction:
-		_lerp_factor += delta * GLOW_SPEED
-		if _lerp_factor >= 1.0:
-			_lerp_factor = 1.0
-			_glow_direction = false
-	else:
-		_lerp_factor -= delta * GLOW_SPEED
-		if _lerp_factor <= 0.0:
-			_lerp_factor = 0.0
-			_glow_direction = true
+	_lerp_factor += (delta * GLOW_SPEED) * (1 if _glow_direction else -1)
+	if _lerp_factor >= 1.0:
+		_lerp_factor = 1.0
+		_glow_direction = false
+	elif _lerp_factor <= 0.0:
+		_lerp_factor = 0.0
+		_glow_direction = true
 	
-	game_card.card_body.card_parts.glow.modulate.r = _initial_modulate.r + _lerp_factor
-	game_card.card_body.card_parts.glow.modulate.g = _initial_modulate.g + _lerp_factor
-	game_card.card_body.card_parts.glow.modulate.b = _initial_modulate.b + _lerp_factor
-	game_card.card_body.card_parts.glow.modulate.a = clamp(_alpha_factor, 0.0, 1.0)
+	card_glow.modulate.r = _initial_modulate.r + _lerp_factor
+	card_glow.modulate.g = _initial_modulate.g + _lerp_factor
+	card_glow.modulate.b = _initial_modulate.b + _lerp_factor
+	card_glow.modulate.a = _alpha_factor
 	
 func refresh_initial_modulate() -> void:
 	if custom_glow:
