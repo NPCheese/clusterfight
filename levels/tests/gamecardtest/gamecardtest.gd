@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var game_card: HandCard = $HandCard
+@onready var game_card: HandCard = $RightHandCard
 @onready var random_card_data: Button = $RandomCardData
 @onready var glow_up: Button = $GlowUp
 @onready var glow_down: Button = $GlowDown

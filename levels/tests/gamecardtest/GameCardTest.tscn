@@ -14,10 +14,10 @@ script = ExtResource("1_bfu8u")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mncin")
 
-[node name="GameCard" parent="." instance=ExtResource("2_macpe")]
+[node name="LeftGameCard" parent="." instance=ExtResource("2_macpe")]
 position = Vector2(624, 285)
 
-[node name="HandCard" parent="." instance=ExtResource("3_7gcso")]
+[node name="RightHandCard" parent="." instance=ExtResource("3_7gcso")]
 position = Vector2(759, 283)
 
 [node name="RandomCardData" type="Button" parent="."]

@@ -1,7 +1,7 @@
 extends Node2D
 class_name GameCard
 
-@export var data: CardData = null : set = _on_set_data
+@export var data: CardData = null: set = _on_set_data
 
 @onready var comp_appearance: ComponentGameCardAppearance = $CompAppearance
 @onready var comp_glow: ComponentGameCardGlow = $CompGlow
@@ -32,18 +32,21 @@ func _on_flipped() -> void:
 func _on_glow_color_changed() -> void:
 	comp_glow.refresh_initial_modulate()
 
-func _on_set_data(new_val :CardData) -> void:
+func _on_set_data(new_val: CardData) -> void:
+	# Ignore data assignment until node is ready
+	if not is_node_ready():
+		return
+
 	if new_val == data:
-		print_debug( "[%s] new card data (%s) is identical to current card data (%s)" % [
+		print_debug("[%s] new card data (%s) is identical to current card data (%s)" % [
 			name,
 			"null" if not new_val else new_val.cardName,
 			"null" if not data else data.cardName
-		] )
+		])
 		return
 	data = new_val
 	
-	if is_node_ready():
-		comp_appearance.update_appearance()
+	comp_appearance.update_appearance()
 
 func _on_get_valid_card_data() -> bool:
 	return data != null

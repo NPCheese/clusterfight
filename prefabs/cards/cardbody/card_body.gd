@@ -26,7 +26,7 @@ func _on_set_appearance_data(new_val: CardData) -> void:
 	card_parts.artwork.texture = appearance_data.artworkVariants.pick_random()
 	card_parts.glow.glow_color = GameCards.CardColors[appearance_data.highlightColor]
 	
-	# Pre-special case edits
+	# Pre-special cases
 	card_parts.title.flip_h = false
 	card_parts.title.flip_v = false
 	
